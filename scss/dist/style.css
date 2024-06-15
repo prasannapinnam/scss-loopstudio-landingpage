@@ -44,7 +44,17 @@
   font-family: "Alata", sans-serif;
   font-weight: 400;
   font-size: 40px;
-  z-index: 2;
+  z-index: 5;
+}
+.hero-section .nav .cross-icon {
+  display: none;
+  color: #ffffff;
+  z-index: 5;
+  font-size: 30px;
+  padding-right: 3vw;
+}
+.hero-section .nav .cross-icon.show {
+  display: block;
 }
 .hero-section .nav .hamburger {
   display: none;
@@ -89,6 +99,21 @@
     width: 45%;
   }
 }
+.hero-section .nav .nav-links.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding-left: 10vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 3;
+}
 .hero-section .nav .nav-links .nav-link {
   font-family: "Alata", sans-serif;
   font-weight: 400;
@@ -108,6 +133,12 @@
   border-radius: 2px;
   left: 50%;
   transform: translateX(-50%);
+}
+.hero-section .nav .nav-links .nav-link.show {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 .hero-section p {
   position: absolute;
