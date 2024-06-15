@@ -1,0 +1,219 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+@use 'typography' as *;
+@use 'resets' as *;
+
+
+  
+  .hero-section {
+    height: 600px;
+    position: relative;
+    background-image: url(../../images/desktop/image-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &::after { /*overlay over image*/
+        @include overlay();
+    }
+    
+
+    .nav {
+        height: 20%;
+        color: $text-color;
+        @include flex-display();
+        @include common-padding();
+
+        &-logo {
+            @include alata-font(40px);
+            z-index: 2;
+        }
+    
+        .nav-links{
+            @include flex-display();
+            width: 35%;
+
+            .nav-link {
+                @include alata-font(15px);
+                @include link-styling($text-color);
+                z-index: 2;
+                position: relative;
+
+                &:hover::after{
+                   @include link-hover-state();
+                }
+                
+            } 
+        }
+      }  
+      
+      p {
+        position: absolute;
+        border: 2px solid $text-color;
+        width: 45%;
+        text-transform: uppercase;
+        color: $text-color;
+        top: 35%;
+        left: 10vw;
+        @include josefin-font(70px); 
+        padding: 20px;
+        z-index: 2;
+    }
+
+    
+  }
+
+  .leader-intro{
+    margin:20vh 0 20vh 10vw;
+    position: relative;
+
+    .leader-about{
+        background-color: $white-color;
+        position: absolute;
+        left: 45%;
+        bottom:0;
+        padding: 10vh 5vw 0 5vw;
+        width: 40vw;
+
+        h2{
+            text-transform: uppercase;
+            @include josefin-font(50px); 
+            margin-bottom: 20px;
+        }
+
+        p{
+            color: $grey-color;
+            @include alata-font(15px);
+            word-spacing: 2px;
+        }
+    }
+}
+  
+.our-creations {
+    @include common-padding();
+    margin-bottom: 20vh;
+
+    .creation-header {
+        @include flex-display();
+        margin-bottom: 70px;
+
+        h2{
+            @include josefin-font(40px); 
+            text-transform: uppercase;
+        }
+        a{
+            @include link-styling($black-color);
+            @include alata-font(15px);
+            border: 1px solid $black-color;
+            padding: 10px 45px;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+
+            &:hover{
+                background-color: $black-color;
+                color: $white-color;
+            }
+        }
+    }
+
+    .creation-cards{
+        @include flex-display();
+        flex-wrap: wrap;
+        row-gap: 30px;
+
+        /*adding images as backgrounds in each-card*/
+        @each $card-num,$card-image in $card-images{
+            .card-#{$card-num}{
+                @include card-overlay($card-image);
+            }
+
+            .card-#{$card-num}:hover {
+                @include card-overlay-hover($card-image);
+
+            }
+        }
+
+        .creation-card{
+            position: relative;
+
+            &:hover h3 {
+                color: black;
+                font-weight: 900
+            }
+
+        h3{
+        @include josefin-font(35px);
+        color: $white-color;
+        text-transform: uppercase;
+        position: absolute;
+        top: 350px;
+        left: 20px;
+        width: 15vw;
+        }
+    }
+}
+
+}
+
+
+footer {
+    background-color: $black-color;
+    padding: 30px 7vw 30px 10vw;    
+    color: $white-color;
+
+    .social-links-bar { 
+        @include flex-display();
+        margin-bottom: 30px;
+
+        a {
+            @include link-styling($white-color);
+            @include alata-font(30px);
+        }
+
+        .fa-brands {
+            font-size: 25px;
+            margin-left: 20px;
+            color: $white-color;
+            position: relative;
+
+            &:hover::after {
+                margin-top: 5px;
+                @include link-hover-state();
+            }
+        }
+        
+        }
+  
+    .copyright-part {
+        @include flex-display();
+        @include alata-font(15px);
+
+        .copyright-nav-items {
+            @include flex-display();
+            width: 40%;
+
+            .copyright-nav-item {
+                @include link-styling($white-color);
+                    position: relative;
+        
+                    &:hover::after {
+                           @include link-hover-state();
+                    }
+                    
+                    }
+            
+            }
+
+            .copyright {
+                color: $grey-color;
+            }
+            
+    
+        }
+
+       
+    }
+
+
+  
+  

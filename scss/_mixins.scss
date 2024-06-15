@@ -1,0 +1,67 @@
+@use 'variables' as *;
+
+@mixin link-styling($text-color) {
+    text-decoration: none;
+    color: $text-color ;
+  }
+
+@mixin flex-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin common-padding() {
+    padding: 0 7vw 0 10vw;
+}
+
+@mixin overlay() {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+@mixin card-overlay($image) {
+    width: 23%;
+    height: 460px;
+    background: linear-gradient(
+    to top, 
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0)
+),
+url($image);
+background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    }
+
+    @mixin card-overlay-hover($image) {
+        width: 23%;
+        height: 460px;
+        background: linear-gradient(
+        to top, 
+        rgba(218, 212, 206, 0.8),
+        rgba(218, 212, 206, 0.8)
+    ),
+    url($image);
+    background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        }
+
+@mixin link-hover-state() {
+    content: '';
+    height: 3px;
+    width: 20px;
+    position: absolute;
+    background-color: $text-color;
+    top: 25px;
+    border-radius: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
