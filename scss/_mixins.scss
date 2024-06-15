@@ -65,3 +65,41 @@ background-size: cover;
     left: 50%;
     transform: translateX(-50%);
 }
+
+/*media queries*/
+
+/* Extra small devices (phones) */
+@mixin phone-view() {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+
+/* Small devices (tablets) */
+@mixin tablet-view(){
+    @media (min-width: 577px) and (max-width: 768px) {
+        @content;
+    }
+}
+
+/* Medium devices (desktops) */
+@mixin desktop-view(){
+    @media (min-width: 769px) and (max-width: 992px) {
+        @content;
+    }
+}
+
+/* Large devices (large desktops) */
+@mixin large-desktop-view(){
+    @media (min-width: 993px) and (max-width: 1200px) {
+        @content;
+    }
+}
+
+/* Extra large devices (larger desktops) */
+@mixin extra-large-devices-view(){
+    @media (min-width: 1201px) {
+        @content;
+    }
+}

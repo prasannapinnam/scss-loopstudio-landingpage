@@ -7,6 +7,7 @@
   
   .hero-section {
     height: 600px;
+    width: 100vw;
     position: relative;
     background-image: url(../../images/desktop/image-hero.jpg);
     background-size: cover;
@@ -28,11 +29,39 @@
             @include alata-font(40px);
             z-index: 2;
         }
+
+       
+        .hamburger {
+            display: none;
+            z-index: 2;
+
+           @include phone-view(){
+               display: block;
+               @include alata-font(35px);
+               color: $white-color;
+            }
+
+            @include tablet-view(){
+               display: block;
+               @include alata-font(35px);
+               color: $white-color;
+            }    
+        }
     
         .nav-links{
             @include flex-display();
             width: 35%;
+            @include phone-view(){
+                display: none;
+            }
+            @include tablet-view(){
+                display: none;
+            }
+            @include desktop-view(){
+                width: 45%;
+            }
 
+        
             .nav-link {
                 @include alata-font(15px);
                 @include link-styling($text-color);
@@ -50,7 +79,7 @@
       p {
         position: absolute;
         border: 2px solid $text-color;
-        width: 45%;
+        width: 50%;
         text-transform: uppercase;
         color: $text-color;
         top: 35%;
@@ -58,14 +87,51 @@
         @include josefin-font(70px); 
         padding: 20px;
         z-index: 2;
+
+        @include phone-view(){
+            @include josefin-font(34px);
+            width: 80%;
+            top:40%;
+        }
+
+        @include tablet-view(){
+            @include josefin-font(40px);
+            width: 55%;
+            top:40%;
+        }
+
+        @include desktop-view(){
+            @include josefin-font(50px);
+            width: 55%;
+            top:40%;
+        }
+
+
+
     }
 
     
   }
 
   .leader-intro{
-    margin:20vh 0 20vh 10vw;
+    margin:20vh 10vw 20vh 10vw;
     position: relative;
+
+
+    img {
+        @include phone-view(){
+            width: 100%;
+        }
+
+        @include tablet-view(){
+            width: 100%;
+        }
+
+        @include desktop-view(){
+            width: 100%;
+        }
+    }
+
 
     .leader-about{
         background-color: $white-color;
@@ -75,16 +141,53 @@
         padding: 10vh 5vw 0 5vw;
         width: 40vw;
 
+        @include phone-view(){
+            position: static;
+            width: 100%;
+        }
+
+        @include tablet-view(){
+            position: static;
+            width: 100%;
+        }
+
+        @include desktop-view(){
+            position: static;
+            width: 100%;
+        }
+
         h2{
             text-transform: uppercase;
             @include josefin-font(50px); 
             margin-bottom: 20px;
+
+            @include phone-view(){
+                @include josefin-font(30px); 
+                font-weight: 900;
+                margin-top: 30px;
+                text-align: center;
+            }
+
+             @include tablet-view(){
+                @include josefin-font(40px); 
+                font-weight: 400;
+                margin-top: 30px;
+                text-align: center;
+            }
+
+            @include desktop-view(){
+                @include josefin-font(50px); 
+                font-weight: 400;
+                margin-top: 30px;
+                text-align: center;
+            }
         }
 
         p{
             color: $grey-color;
             @include alata-font(15px);
             word-spacing: 2px;
+            text-align: center;
         }
     }
 }
@@ -92,14 +195,30 @@
 .our-creations {
     @include common-padding();
     margin-bottom: 20vh;
+    position: relative;
+
+    @include phone-view(){
+        padding-bottom: 30vh;
+    }
 
     .creation-header {
         @include flex-display();
         margin-bottom: 70px;
 
+        @include phone-view(){
+            display: block;
+            text-align: center;
+            margin: 90px 0 50px 0;
+        }
+
         h2{
             @include josefin-font(40px); 
             text-transform: uppercase;
+
+            @include phone-view(){
+                @include josefin-font(30px);
+                font-weight: 900;
+            }
         }
         a{
             @include link-styling($black-color);
@@ -113,6 +232,13 @@
                 background-color: $black-color;
                 color: $white-color;
             }
+
+            @include phone-view() {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
 
@@ -121,15 +247,28 @@
         flex-wrap: wrap;
         row-gap: 30px;
 
+        @include phone-view(){
+            flex-direction: column;
+        }
+
         /*adding images as backgrounds in each-card*/
         @each $card-num,$card-image in $card-images{
             .card-#{$card-num}{
                 @include card-overlay($card-image);
+
+                @include phone-view(){
+                    height: 130px;
+                    width: 100%;
+                }
             }
 
             .card-#{$card-num}:hover {
                 @include card-overlay-hover($card-image);
 
+                @include phone-view(){
+                    height: 130px;
+                    width: 100%;
+                }
             }
         }
 
@@ -142,13 +281,34 @@
             }
 
         h3{
-        @include josefin-font(35px);
+        @include josefin-font(30px);
         color: $white-color;
         text-transform: uppercase;
         position: absolute;
         top: 350px;
         left: 20px;
         width: 15vw;
+
+            @include phone-view(){
+                   top: 65%;
+                   @include josefin-font(15px);
+                   width: 25vw;
+                   font-weight: 900;
+            }
+
+            @include tablet-view(){
+                   top: 85%;
+                   @include josefin-font(15px);
+                   width: 80%;
+                   font-weight: 900;
+            }
+
+            @include desktop-view(){
+                   top: 85%;
+                   @include josefin-font(20px);
+                   width: 80%;
+                   font-weight: 500;
+            }
         }
     }
 }
@@ -160,14 +320,41 @@ footer {
     background-color: $black-color;
     padding: 30px 7vw 30px 10vw;    
     color: $white-color;
+    position: relative;
 
     .social-links-bar { 
         @include flex-display();
         margin-bottom: 30px;
 
+         @include phone-view(){
+                flex-direction: column;
+        }
+
+         @include tablet-view(){
+                flex-direction: column;
+        }
+
         a {
             @include link-styling($white-color);
             @include alata-font(30px);
+        }
+
+
+      .social-links {  
+        @include phone-view(){
+            position: absolute;
+            top : 70%;
+            left: 50%;
+            transform: translateX(-50%);
+            @include flex-display();
+        }
+
+        @include tablet-view(){
+            position: absolute;
+            top : 70%;
+            left: 50%;
+            transform: translateX(-50%);
+            @include flex-display();
         }
 
         .fa-brands {
@@ -181,16 +368,35 @@ footer {
                 @include link-hover-state();
             }
         }
-        
+
         }
+    }
   
     .copyright-part {
         @include flex-display();
         @include alata-font(15px);
 
+         @include phone-view(){
+                flex-direction: column;
+            }
+
+        @include tablet-view(){
+                flex-direction: column;
+            }
+
         .copyright-nav-items {
             @include flex-display();
             width: 40%;
+
+            @include phone-view(){
+                flex-direction: column;
+                row-gap: 10px;
+            }
+
+            @include tablet-view(){
+                flex-direction: column;
+                row-gap: 10px;
+            }
 
             .copyright-nav-item {
                 @include link-styling($white-color);
@@ -206,14 +412,19 @@ footer {
 
             .copyright {
                 color: $grey-color;
+                text-align: center;
+
+                @include phone-view(){
+                    margin-top: 100px;
+                }
+
+                @include tablet-view(){
+                    margin-top: 100px;
+                }
+
             }
-            
-    
-        }
+        }  
 
-       
-    }
-
-
+}
   
   
