@@ -80,6 +80,10 @@ addEventListener;
 toggle;
 ```
 
-### Screenshot
+> ![Static Badge](https://img.shields.io/badge/html-blue) ![Static Badge](https://img.shields.io/badge/sass-pink) ![Static Badge](https://img.shields.io/badge/javascript-yellow)
+
+
+
+### project Screenshot
 
 ![image of landing page](./design/desktop-design.jpg)
