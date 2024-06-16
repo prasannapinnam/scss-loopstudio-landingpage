@@ -1,33 +1,11 @@
 HTML,SASS project by lakshmi prasanna pinnam
 
-## Table of contents
-
-- [The challenge](#the-challenge)
-- [Screenshot](#screenshot)
-- [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
 ### The challenge
 
 Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
-
-### Screenshot
-
-![image of landing page](./design/desktop-design.jpg)
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
@@ -50,7 +28,7 @@ Users should be able to:
 
 ### What I learned
 
-#### images
+#### about images
 
 always make image as background of container because:
 
@@ -66,7 +44,7 @@ background-repeat: no-repeat;
 background-position: center top;
 ```
 
-#### pseudo-elements
+#### about pseudo-elements
 
 placing content of ::after which is positioned absolute , exactly in middle
 
@@ -75,7 +53,7 @@ left: 50%;
 transform: translateX(-50%);
 ```
 
-### background-size options
+### about background-size options
 
 - cover :
 
@@ -95,7 +73,7 @@ background-size: 50% 50%; /* width height */
 
 ###
 
-vanillajs
+in vanillajs
 
 ```js
 querySelector;
@@ -103,3 +81,7 @@ querySelectorAll;
 addEventListener;
 toggle;
 ```
+
+### Screenshot
+
+![image of landing page](./design/desktop-design.jpg)
