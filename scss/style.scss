@@ -4,11 +4,11 @@
 @use 'resets' as *;
 
 
-  
+//section 1
   .hero-section {
     height: 600px;
     width: 100vw;
-    position: relative;
+    position: relative; //kept for absolute content inside this section 
     background-image: url(../../images/desktop/image-hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@
             font-size: 30px;
             padding-right: 3vw;
 
-            &.show{
+            &.show{ //class to show the cross icon 
                 display: block;
             }
         }
@@ -145,6 +145,7 @@
     
   }
 
+//section 2
   .leader-intro{
     margin:20vh 10vw 20vh 10vw;
     position: relative;
@@ -223,7 +224,8 @@
         }
     }
 }
-  
+
+//section 3
 .our-creations {
     @include common-padding();
     margin-bottom: 20vh;
@@ -347,7 +349,7 @@
 
 }
 
-
+// section 4
 footer {
     background-color: $black-color;
     padding: 30px 7vw 30px 10vw;    
