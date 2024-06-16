@@ -34,7 +34,7 @@ always make image as background of container because:
 
 - by doing so we can blend image with a color
 - if we apply flex-grow automatically image also will grow as it is background
-- if we use normal images inside a container if we apply flex-grow to container images wont grow
+- if we use normal images inside a container if we apply flex-grow to container images wont grow in some scenarios
 
 ```css
 background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
