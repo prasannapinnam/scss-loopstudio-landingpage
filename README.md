@@ -1,5 +1,7 @@
 HTML,SASS project by lakshmi prasanna pinnam
 
+> ![Static Badge](https://img.shields.io/badge/html-blue) ![Static Badge](https://img.shields.io/badge/sass-pink) ![Static Badge](https://img.shields.io/badge/javascript-yellow)
+
 ### The challenge
 
 - responsive landing page depending on various device's screen size
@@ -79,10 +81,6 @@ querySelectorAll;
 addEventListener;
 toggle;
 ```
-
-> ![Static Badge](https://img.shields.io/badge/html-blue) ![Static Badge](https://img.shields.io/badge/sass-pink) ![Static Badge](https://img.shields.io/badge/javascript-yellow)
-
-
 
 ### project Screenshot
 
