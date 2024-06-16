@@ -2,10 +2,8 @@ HTML,SASS project by lakshmi prasanna pinnam
 
 ### The challenge
 
-Users should be able to:
-
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
+- responsive landing page depending on various device's screen size
+- implement hover states for all interactive elements on the page
 
 ## My process
 
