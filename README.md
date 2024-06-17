@@ -2,7 +2,9 @@ HTML,SASS project by lakshmi prasanna pinnam
 
 > ![Static Badge](https://img.shields.io/badge/html-blue) ![Static Badge](https://img.shields.io/badge/sass-pink) ![Static Badge](https://img.shields.io/badge/javascript-yellow)
 
-### The challenge
+time taken to build this page : 8 hours [along with media queries, active states styling, scss structure planning]
+ 
+ ### The challenge
 
 - responsive landing page depending on various device's screen size
 - implement hover states for all interactive elements on the page
