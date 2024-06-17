@@ -1,4 +1,4 @@
-HTML,SASS project by lakshmi prasanna pinnam
+HTML,SASS project by lakshmi prasanna pinnam **fullstack javascript developer**
 
 > ![Static Badge](https://img.shields.io/badge/html-blue) ![Static Badge](https://img.shields.io/badge/sass-pink) ![Static Badge](https://img.shields.io/badge/javascript-yellow)
 
